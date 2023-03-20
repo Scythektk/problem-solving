@@ -7,7 +7,7 @@ vector<int> runningSum(vector<int> &nums)
     int sum = 0;
     for (int i = 0; i < nums.size(); i++)
     {
-        sum += nums[i];
+        sum += nums[i]; // better solution would be to change nums in place rather than allocate new memory
         ans.push_back(sum);
     }
     return ans;
