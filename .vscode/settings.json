@@ -3,6 +3,8 @@
         "*.ejs": "html",
         "vector": "cpp",
         "iosfwd": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp"
     }
 }
