@@ -14,6 +14,7 @@ class Solution
 public:
     ListNode *solve(ListNode *list1, ListNode *list2)
     {
+        // if list has only one element, we append list2 to it
         if (list1->next == NULL)
         {
             list1->next = list2;
@@ -41,11 +42,12 @@ public:
             }
             else
             {
-                // move curr1 and next1
+                // move curr1 and next1 forward
                 curr1 = next1;
                 next1 = next1->next;
                 if (next1 == NULL)
                 {
+                    // if list1 is over, we append list2 and return
                     curr1->next = curr2;
                     return list1;
                 }
@@ -67,12 +69,13 @@ public:
         {
             return list1;
         }
-
+        // if the first element in list1 is smaller, then we start with list1
         if (list1->val <= list2->val)
         {
             ListNode *ans = solve(list1, list2);
             return ans;
         }
+        // if the first element in list2 is smaller, then we start with list2
         else
         {
             ListNode *ans = solve(list2, list1);
