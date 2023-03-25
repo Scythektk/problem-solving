@@ -42,4 +42,27 @@ public:
         }
         return curr;
     }
+
+    void displayList(ListNode *head)
+    {
+        ListNode *current = head;
+        while (current->next)
+        {
+            cout << current->val << "->";
+            current = current->next;
+        }
+        cout << current->val << endl;
+    }
 };
+
+int main()
+{
+    Solution s = Solution();
+    ListNode *head = new ListNode(6);
+    head->next = new ListNode(5);
+    head->next->next = new ListNode(11);
+    head->next->next->next = new ListNode(3);
+    s.displayList(head);
+    head = s.middleNode(head);
+    s.displayList(head);
+}
