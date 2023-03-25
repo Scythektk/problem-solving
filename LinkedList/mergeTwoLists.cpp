@@ -83,4 +83,34 @@ public:
         }
         return 0;
     }
+
+    void displayList(ListNode *head)
+    {
+        ListNode *current = head;
+        while (current->next)
+        {
+            cout << current->val << "->";
+            current = current->next;
+        }
+        cout << current->val << endl;
+    }
 };
+
+int main()
+{
+    Solution s = Solution();
+    ListNode *list1 = new ListNode(6);
+    list1->next = new ListNode(7);
+    list1->next->next = new ListNode(11);
+    list1->next->next->next = new ListNode(14);
+    ListNode *list2 = new ListNode(2);
+    list2->next = new ListNode(7);
+    list2->next->next = new ListNode(13);
+    list2->next->next->next = new ListNode(15);
+    cout << "list 1: ";
+    s.displayList(list1);
+    cout << "list 2: ";
+    s.displayList(list2);
+    list1 = s.mergeTwoLists(list1, list2);
+    s.displayList(list1);
+}
