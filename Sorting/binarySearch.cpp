@@ -9,7 +9,7 @@ public:
         int r = (nums.size()) - 1; // right pointer
         while (l <= r)
         {
-            int m = l + (r - l) / 2; // middle index
+            int m = (r + l) / 2; // middle index
             if (nums[m] < target)
             {
                 l = m + 1;
