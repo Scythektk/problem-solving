@@ -22,7 +22,7 @@ long long zeroFilledSubarray(vector<int> &nums)
 
 int main()
 {
-    vector<int> v1(3);
+    vector<int> v1(6);
     v1[0] = 1;
     v1[1] = 2;
     v1[2] = 0;
